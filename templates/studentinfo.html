@@ -1,0 +1,33 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data</title>
+</head>
+<body>
+    <div>
+        
+        <ul>
+            {% for stu in stud %}
+            <li>
+            {{stu.firstname}}   
+            </li>
+            <li>
+            {{stu.lastname}}   
+            </li>
+            <li>
+            <img src="{{stu.img.url}}" alt="" height="100" width="200">   
+            </li>
+            <li>
+            {{stu.age}}   
+            </li>
+            <br>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

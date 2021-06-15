@@ -12,6 +12,7 @@
     <ul>
         {%if user.is_authenticated%}
         <h3>Hello,{{user.username}}</h3>
+        <li><a href="student/studentdata">Student Data</a></li>
         <li><a href="logout">Logout</a></li>
         {%else%}
         <li><a href="register">Register</a></li>
