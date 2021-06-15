@@ -8,5 +8,8 @@ class studenttable(models.Model):
     img = models.ImageField(upload_to='Studentpics')
     age = models.IntegerField()
 
+    def __str__(self):
+        return self.firstname +" "+ self.lastname
+
     
     

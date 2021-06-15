@@ -14,9 +14,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.core.exceptions import ViewDoesNotExist
 from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
+from home import views
+
+#django header customization
+
+#admin.site.site_header = 'Django Admin Panel'
+#admin.site.site_title = 'Welcome Admin'
+#admin.site.index_title = 'Welcome to this portal'
 
 urlpatterns = [
     path('',include('home.urls')),
